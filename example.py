@@ -212,7 +212,7 @@ class example:
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
-            value_a = self.dlg.spValueA.value()
-            value_b = self.dlg.spValueB.value()
-            self.dlg.lblProductAB.setText(f"{product}")
+            # value_a = self.dlg.spValueA.value()
+            # value_b = self.dlg.spValueB.value()
+            # self.dlg.lblProductAB.setText(f"{product}")
             pass
