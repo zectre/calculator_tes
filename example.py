@@ -202,9 +202,9 @@ class example:
         if self.first_start == True:
             self.first_start = False
             self.dlg = exampleDialog()
-            prcs = Processing()
-            self.dlg.pbPrintHelloWorld.clicked.connect(prcs.onPbPrintHelloWorldClicked)
-            self.dlg.pbCalculate.clicked.connect(prcs.onPbCalculateClicked)
+            self.prcs = Processing()
+            self.dlg.pbPrintHelloWorld.clicked.connect(self.prcs.onPbPrintHelloWorldClicked)
+            self.dlg.pbCalculate.clicked.connect(self.prcs.onPbCalculateClicked)
 
         # show the dialog
         self.dlg.show()
@@ -212,7 +212,6 @@ class example:
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
-            # value_a = self.dlg.spValueA.value()
-            # value_b = self.dlg.spValueB.value()
-            # self.dlg.lblProductAB.setText(f"{product}")
+            self.value_a = self.dlg.spValueA.value()
+            self.value_b = self.dlg.spValueB.value()
             pass
