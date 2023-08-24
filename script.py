@@ -3,19 +3,17 @@ from .example import *
 
 
 class Processing:
+    def __init__(self):
+        self.dlg = exampleDialog()
     def onPbCalculateClicked(self):
-
-            self.dlg = exampleDialog()
-            value_a = self.dlg.spValueA.value()
-            value_b = self.dlg.spValueB.value()
-            
-            product = value_a * value_b
-            
-            self.dlg.lblProductAB.setText(f"{product}")
+        var = example()
+        value_aa = var.run(value_a)
+        value_bb = var.run(value_b)
+        product = value_aa * value_bb  
+        self.dlg.lblProductAB.setText(f"{product}")
 
     def onPbPrintHelloWorldClicked(self):
-            self.dlg = exampleDialog()
-            if self.dlg.cbUseDutch.isChecked():
-                print('Walawala Ololo')
-            else:
-                print('Hello World')
+        if self.dlg.cbUseDutch.isChecked():
+            print('Walawala Ololo')
+        else:
+            print('Hello World')
