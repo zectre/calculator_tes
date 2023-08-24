@@ -6,9 +6,9 @@ class Processing:
     def __init__(self):
         self.dlg = exampleDialog()
     def onPbCalculateClicked(self):
-        var = example()
-        value_aa = var.run(value_a)
-        value_bb = var.run(value_b)
+        self.var = example()
+        value_aa = self.var.run(value_a)
+        value_bb = self.var.run.value_b
         product = value_aa * value_bb  
         self.dlg.lblProductAB.setText(f"{product}")
 
